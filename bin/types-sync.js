@@ -38,6 +38,8 @@ const explorer = cosmiconfig('typesSync');
       uninstaller = 'bolt remove';
     }
 
+    console.log(chalk.blue(`Using ${packageManager}`));
+
     if (types.install.length === 0) {
       console.log(chalk.yellow('No new typings to install'));
     } else {
