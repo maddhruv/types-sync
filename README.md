@@ -41,8 +41,8 @@ const types = typesSync({
 
 Add a `.typesSyncrc.json` at the root of your project.
 
-| options       | type                       | description                             |
-| ------------- | -------------------------- | --------------------------------------- |
-| dependencies  | `Array`                    | dependencies to manually add for sync   |
-| ignore        | `Array`                    | ignore these dependencies from removing |
-| packageManage | `npm`/`yarn`/`pnpm`/`bolt` | package manager to use                  |
+| options        | type                       | description                             |
+| -------------- | -------------------------- | --------------------------------------- |
+| dependencies   | `Array`                    | dependencies to manually add for sync   |
+| ignore         | `Array`                    | ignore these dependencies from removing |
+| packageManager | `npm`/`yarn`/`pnpm`/`bolt` | package manager to use                  |
