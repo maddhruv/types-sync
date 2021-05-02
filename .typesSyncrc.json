@@ -1,0 +1,6 @@
+{
+  "dependencies": ["node"],
+  "ignore": [],
+  "packageManager": "npm",
+  "removeUnused": true
+}

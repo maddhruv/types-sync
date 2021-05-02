@@ -1,0 +1,58 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "bin": {
+    "types-sync": "./bin/types-sync.js",
+    "typessync": "./bin/types-sync.js"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "types-sync",
+  "author": "Dhruv Jain",
+  "module": "dist/types-sync.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/types-sync.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/types-sync.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.10.2",
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/node": "^15.0.1",
+    "husky": "^6.0.0",
+    "size-limit": "^4.10.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "^3.9.9"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "cosmiconfig": "^5.2.1",
+    "isomorphic-fetch": "^3.0.0"
+  }
+}
