@@ -51,3 +51,8 @@ Add a `.types-syncrc.json` at the root of your project.
 | dependencies   | `Array`                    | dependencies to manually add for sync   |
 | ignore         | `Array`                    | ignore these dependencies from removing |
 | packageManager | `npm`/`yarn`/`pnpm`/`bolt` | package manager to use                  |
+| removeUnused   | `Boolean`                  | remove unsued types                     |
+
+Refer to
+[./types-syncrc.json](https://github.com/maddhruv/types-sync/blob/master/.types-syncrc.json) for
+full config
