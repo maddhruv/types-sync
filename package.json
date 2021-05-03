@@ -57,7 +57,12 @@
     "cosmiconfig": "^5.2.1",
     "isomorphic-fetch": "^3.0.0"
   },
-  "contributors": [
+  "maintainers": [
     "maddhruv"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maddhruv/types-sync.git"
+  },
+  "homepage": "https://github.com/maddhruv/types-sync#readme"
 }
