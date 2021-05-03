@@ -3,6 +3,9 @@
 Keep your types in sync with DefinitelyTyped - auto install/uninstall types for dependencies on
 postinstall.
 
+[![npm version](https://badge.fury.io/js/types-sync.svg)](https://www.npmjs.com/package/types-sync)
+[![CI](https://github.com/maddhruv/types-sync/actions/workflows/main.yml/badge.svg)](https://github.com/maddhruv/types-sync/actions/workflows/main.yml)
+
 ## Features
 
 - Works with `npm`, `yarn`, `pnpm`, `bolt`
@@ -17,13 +20,15 @@ postinstall.
 
 ### As CLI
 
-Use `types-sync` as `postinstall` or `prebuild` scripts in your _package.json_
+Use `types-sync` as `prepare` or `prebuild` scripts in your _package.json_
 
 ```js
 "scripts": {
-  "postinstall": "types-sync-types",
+  "prepare": "types-sync",
 }
 ```
+
+Note: use `types-sync` as the `prepare` script so that it only runs in the local environment.
 
 ### As Module
 
