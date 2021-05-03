@@ -6,7 +6,7 @@ const cosmiconfig = require('cosmiconfig');
 
 const { typesSync } = require('../dist');
 
-const explorer = cosmiconfig('typesSync');
+const explorer = cosmiconfig('types-sync');
 
 (async () => {
   try {

@@ -39,7 +39,7 @@ const types = typesSync({
 
 ## Config
 
-Add a `.typesSyncrc.json` at the root of your project.
+Add a `.types-syncrc.json` at the root of your project.
 
 | options        | type                       | description                             |
 | -------------- | -------------------------- | --------------------------------------- |
