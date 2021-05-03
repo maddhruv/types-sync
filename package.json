@@ -5,7 +5,7 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "bin"
   ],
   "bin": {
     "types-sync": "./bin/types-sync.js",
