@@ -14,7 +14,9 @@ const explorer = cosmiconfig('types-sync');
       fs.readFileSync(`${process.cwd()}/package.json`).toString(),
     );
 
-    const { config } = await explorer.search();
+    const cosmic = await explorer.search();
+
+    const config = cosmic ? cosmic.config : {};
 
     const types = await typesSync({
       dependencies: [...Object.keys(dependencies || []), ...(config.dependencies || [])],
