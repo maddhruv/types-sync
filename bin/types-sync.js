@@ -17,8 +17,8 @@ const explorer = cosmiconfig('types-sync');
     const { config } = await explorer.search();
 
     const types = await typesSync({
-      dependencies: [...Object.keys(dependencies), ...(config.dependencies || [])],
-      devDependencies: Object.keys(devDependencies),
+      dependencies: [...Object.keys(dependencies || []), ...(config.dependencies || [])],
+      devDependencies: Object.keys(devDependencies || []),
       ignore: [...(config.ignore || [])],
     });
 
