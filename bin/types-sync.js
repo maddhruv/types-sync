@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
+const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 const cosmiconfig = require('cosmiconfig');
+const findUp = require('find-up');
 
 const { typesSync } = require('../dist');
 
@@ -24,7 +26,17 @@ const explorer = cosmiconfig('types-sync');
       ignore: [...(config.ignore || [])],
     });
 
-    const packageManager = config.packageManager || 'npm';
+    let agent = 'npm'
+    if (!config.packageManager) {
+      const LOCKS = {
+        'pnpm-lock.yaml': 'pnpm',
+        'yarn.lock': 'yarn',
+        'package-lock.json': 'npm',
+      };
+      const result = await findUp(Object.keys(LOCKS));
+      agent = result ? LOCKS[path.basename(result)] : 'npm';
+    }
+    const packageManager = config.packageManager || agent;
 
     let installer = 'npm i -D',
       uninstaller = 'npm uninstall';
