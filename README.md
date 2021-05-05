@@ -53,9 +53,9 @@ Add a `.types-syncrc.json` at the root of your project.
 | packageManager | `npm`/`yarn`/`pnpm`/`bolt` | package manager to use                  |
 | removeUnused   | `Boolean`                  | remove unsued types                     |
 
-Note: `types-sync` will automatically detect the package manager being used. Explicitly Defining the
-`packageManager` config option is optional and if defined will force `types-sync` to use the
-specified package manager.
+Note: `types-sync` will automatically detect the package manager being used according to the lock
+files. Explicitly defining the `packageManager` config option is optional and if defined will force
+`types-sync` to use the specified package manager.
 
 Refer to
 [./types-syncrc.json](https://github.com/maddhruv/types-sync/blob/master/.types-syncrc.json) for
