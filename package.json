@@ -12,14 +12,15 @@
     "typessync": "./bin/types-sync.js"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "release": "release-it"
+    "release": "release-it",
+    "update": "node release.js"
   },
   "husky": {
     "hooks": {
@@ -41,6 +42,7 @@
     "chalk": "^4.1.1",
     "cosmiconfig": "^5.2.1",
     "find-up": "^4.1.0",
+    "simple-git": "^3.14.0",
     "types-directory": "^0.243.0"
   },
   "maintainers": [
