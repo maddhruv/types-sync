@@ -1,6 +1,6 @@
 import { typesSync } from '../src';
 
-describe('Types Synce', () => {
+describe('Types Sync', () => {
   it('Test 1', async () => {
     const t = await typesSync({
       dependencies: ['lodash'],

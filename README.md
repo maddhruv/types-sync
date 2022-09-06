@@ -60,3 +60,8 @@ files. Explicitly defining the `packageManager` config option is optional and if
 Refer to
 [./types-syncrc.json](https://github.com/maddhruv/types-sync/blob/master/.types-syncrc.json) for
 full config
+
+## Related
+
+- Uses [types-directory](https://github.com/maddhruv/types-directory) under the hood to fetch all
+  available types
