@@ -1,4 +1,4 @@
-const git = require('simple-git/promise');
+const git = require('simple-git');
 const { execSync } = require('child_process');
 
 (async function() {

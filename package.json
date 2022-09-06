@@ -19,7 +19,6 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "release": "release-it",
     "update": "node release.js"
   },
   "husky": {
@@ -33,7 +32,6 @@
   "devDependencies": {
     "@types/node": "^18.7.15",
     "husky": "^8.0.1",
-    "release-it": "^15.4.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.8.2"
