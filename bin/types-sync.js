@@ -26,7 +26,7 @@ const explorer = cosmiconfig('types-sync');
       ignore: [...(config.ignore || [])],
     });
 
-    let agent = 'npm'
+    let agent = 'npm';
     if (!config.packageManager) {
       const LOCKS = {
         'pnpm-lock.yaml': 'pnpm',

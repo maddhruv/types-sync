@@ -19,8 +19,6 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "release": "release-it"
   },
   "husky": {
@@ -31,32 +29,19 @@
   "name": "types-sync",
   "author": "Dhruv Jain",
   "module": "dist/types-sync.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/types-sync.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/types-sync.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.10.2",
-    "@types/isomorphic-fetch": "^0.0.35",
-    "@types/node": "^15.0.1",
-    "husky": "^6.0.0",
-    "release-it": "^14.6.1",
-    "size-limit": "^4.10.2",
+    "@types/node": "^18.7.15",
+    "husky": "^8.0.1",
+    "release-it": "^15.4.1",
     "tsdx": "^0.14.1",
-    "tslib": "^2.2.0",
-    "typescript": "^3.9.9"
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.2"
   },
   "dependencies": {
     "chalk": "^4.1.1",
     "cosmiconfig": "^5.2.1",
     "find-up": "^4.1.0",
-    "isomorphic-fetch": "^3.0.0"
+    "types-directory": "^0.243.0"
   },
   "maintainers": [
     "maddhruv"

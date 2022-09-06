@@ -5,7 +5,3 @@ export interface Options {
   dependencies?: Dependencies;
   devDependencies?: Dependencies;
 }
-
-export interface AvailableTypes {
-  types: Dependencies;
-}

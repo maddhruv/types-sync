@@ -1,26 +1,6 @@
-import fetch from 'isomorphic-fetch';
+import { types } from 'types-directory';
 
-import { Dependencies, Options, AvailableTypes } from './types';
-
-const TYPES_DIRECTORY_CDN = 'https://cdn.jsdelivr.net/gh/maddhruv/types-directory/directory.json';
-
-const cache: { data: AvailableTypes | null } = {
-  data: null,
-};
-
-const getTypes = async (): Promise<AvailableTypes> => {
-  if (cache.data !== null) return cache.data;
-
-  try {
-    const response = await fetch(TYPES_DIRECTORY_CDN);
-    const data = await response.json();
-    cache.data = data;
-    return data;
-  } catch (error) {
-    console.error('Please check your internet connection');
-    throw new Error(error);
-  }
-};
+import { Dependencies, Options } from './types';
 
 const without = (source: Dependencies, destination: Dependencies): Dependencies =>
   source.filter(element => !destination.includes(element));
@@ -39,8 +19,6 @@ const typesSync = async (options?: Options) => {
 
   const installedTypes = devDependencies.filter(d => d.indexOf('@types/') === 0);
 
-  const availableTypes = await getTypes();
-
   const depsTypes = without(
     installedTypes.map(t => t.slice(7)),
     ignored,
@@ -50,10 +28,9 @@ const typesSync = async (options?: Options) => {
     t => `@types/${t}`,
   );
 
-  const typesAvailable: Dependencies = intersection(
-    dependenciesAfterExclude,
-    availableTypes.types,
-  ).map(t => `@types/${t}`);
+  const typesAvailable: Dependencies = intersection(dependenciesAfterExclude, types).map(
+    t => `@types/${t}`,
+  );
 
   const typesToInstall: Dependencies = without(typesAvailable, installedTypes);
 
@@ -63,6 +40,6 @@ const typesSync = async (options?: Options) => {
   };
 };
 
-export { typesSync, TYPES_DIRECTORY_CDN };
+export { typesSync };
 
 export default typesSync;
