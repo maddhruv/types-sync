@@ -4,6 +4,8 @@ const { execSync } = require('child_process');
 (async function() {
   await execSync('npm i types-directory@latest');
 
+  await execSync('npm run build');
+
   const files = await git().status();
 
   if (files.modified.includes('package.json')) {
