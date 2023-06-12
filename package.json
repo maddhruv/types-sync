@@ -41,7 +41,7 @@
     "cosmiconfig": "^5.2.1",
     "find-up": "^4.1.0",
     "simple-git": "^3.14.0",
-    "types-directory": "^0.282.0"
+    "types-directory": "^0.283.0"
   },
   "maintainers": [
     "maddhruv"
